@@ -1,0 +1,187 @@
+{
+	"info": {
+		"_postman_id": "c5b16d37-0bf8-4f03-8daf-72599b6487e3",
+		"name": "Tema2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get cars",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8001/api/v1/cars/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"v1",
+						"cars",
+						""
+					]
+				},
+				"description": "Returns all the cars from the database"
+			},
+			"response": []
+		},
+		{
+			"name": "Get car",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8001/api/v1/cars/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"v1",
+						"cars",
+						"1"
+					]
+				},
+				"description": "Returns the car which has the given id"
+			},
+			"response": []
+		},
+		{
+			"name": "Post car",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"brand\": \"Audi\",\n\t\"model\": \"RS6\",\n\t\"year\": \"2017\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8001/api/v1/cars/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"v1",
+						"cars",
+						""
+					]
+				},
+				"description": "Creates a new car in the database"
+			},
+			"response": []
+		},
+		{
+			"name": "Post car at Id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"brand\": \"Honda\",\n\t\"model\": \"Civic\",\n\t\"year\": \"2011\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8001/api/v1/cars/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"v1",
+						"cars",
+						"3"
+					]
+				},
+				"description": "Creates a new entry in the databse with the given id. 409 is returned in case of conflict."
+			},
+			"response": []
+		},
+		{
+			"name": "Put car info at id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"brand\": \"Toyota\",\n\t\"model\": \"Gt86\",\n\t\"year\": \"2014\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8001/api/v1/cars/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"v1",
+						"cars",
+						"5"
+					]
+				},
+				"description": "Replaces the data from the entry that has the given id"
+			},
+			"response": []
+		},
+		{
+			"name": "Patch car at id",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"model\": \"Civic Type R\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8001/api/v1/cars/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"v1",
+						"cars",
+						"3"
+					]
+				},
+				"description": "Modifies the attributes of the car that has the given id"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete car at id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8001/api/v1/cars/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"v1",
+						"cars",
+						"4"
+					]
+				},
+				"description": "Removes the car that has the given id from the database"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
